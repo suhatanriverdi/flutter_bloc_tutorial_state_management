@@ -33,6 +33,12 @@ class _MyHomePageState extends State<MyHomePage> {
   final counterBloc = CounterBloc();
 
   @override
+  void dispose() {
+    counterBloc.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
